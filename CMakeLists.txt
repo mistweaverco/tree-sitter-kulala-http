@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(tree-sitter-kulala-http
         VERSION "0.1.0"
         DESCRIPTION "Kulala HTTP Parser"
-        HOMEPAGE_URL "https://github.com/mistweaverco/kulala.nvim/lua/tree-sitter"
+        HOMEPAGE_URL "https://github.com/mistweaverco/tree-sitter-kulala-http"
         LANGUAGES C)
 
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)

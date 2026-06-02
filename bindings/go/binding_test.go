@@ -3,8 +3,8 @@ package tree_sitter_kulala_http_test
 import (
 	"testing"
 
+	tree_sitter_kulala_http "github.com/mistweaverco/tree-sitter-kulala-http/bindings/go"
 	tree_sitter "github.com/tree-sitter/go-tree-sitter"
-	tree_sitter_kulala_http "github.com/mistweaverco/kulala.nvim/lua/tree-sitter/bindings/go"
 )
 
 func TestCanLoadGrammar(t *testing.T) {

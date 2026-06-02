@@ -9,7 +9,7 @@ from wheel.bdist_wheel import bdist_wheel
 
 sources = [
     "bindings/python/tree_sitter_kulala_http/binding.c",
-    "src/kulala_http.c",
+    "src/parser.c",
 ]
 if path.exists("src/scanner.c"):
     sources.append("src/scanner.c")

@@ -4,6 +4,7 @@ description = "Kulala HTTP Parser"
 version = "0.1.0"
 authors = [
   "Yaro Apletov <yaro@dream-it.es>"
+  "Marco Kellershoff <marco@mistweaverco.com>"
 ]
 license = "MIT"
 readme = "README.md"

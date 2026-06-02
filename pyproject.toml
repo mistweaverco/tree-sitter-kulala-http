@@ -13,14 +13,23 @@ classifiers = [
   "Topic :: Text Processing :: Linguistic",
   "Typing :: Typed",
 ]
-authors = [{ name = "Yaro Apletov", email = "yaro@dream-it.es" }]
+authors = [
+  {
+    name = "Yaro Apletov",
+    email = "yaro@dream-it.es"
+  },
+  {
+    name = "Marco Kellershoff",
+    email = "marco@mistweaverco.com"
+  }
+]
 requires-python = ">=3.10"
 license.text = "MIT"
 readme = "README.md"
 
 [project.urls]
 Homepage = "https://github.com/mistweaverco/tree-sitter-kulala-http"
-Funding = "https://github.com/mistweaverco/kulala.nvim"
+Funding = "https://github.com/mistweaverco/tree-sitter-kulala-http"
 
 [project.optional-dependencies]
 core = ["tree-sitter~=0.24"]

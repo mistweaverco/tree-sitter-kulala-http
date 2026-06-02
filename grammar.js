@@ -1,6 +1,7 @@
 /**
  * @file Kulala HTTP Parser
  * @author Yaro Apletov <yaro@dream-it.es>
+ * @author Marco Kellershoff <marco@mistweaverco.com>
  * @license MIT
  */
 
@@ -129,7 +130,12 @@ module.exports = grammar({
       prec.right(
         seq(
           field("name", $.query_param_name),
-          optional(seq(alias("=", $.operator), optional(field("value", $.query_param_value)))),
+          optional(
+            seq(
+              alias("=", $.operator),
+              optional(field("value", $.query_param_value)),
+            ),
+          ),
         ),
       ),
 
@@ -264,8 +270,17 @@ module.exports = grammar({
         choice($.script, $.path),
         token(repeat1(NL)),
       ),
-    script: (_) =>
-      seq(token(prec(1, "{%")), NL, repeat(LINE_TAIL), token(prec(1, "%}"))),
+    script: ($) =>
+      seq(
+        token(prec(1, "{%")),
+        choice(
+          seq(field("lang", $.script_lang), field("body", $.script_body)),
+          seq(NL, field("body", $.script_body)),
+        ),
+        token(prec(1, "%}")),
+      ),
+    script_lang: (_) => seq(WS, token(prec(1, /lang=(lua|js|ts)/)), NL),
+    script_body: (_) => repeat1(LINE_TAIL),
 
     res_redirect: ($) =>
       seq(
