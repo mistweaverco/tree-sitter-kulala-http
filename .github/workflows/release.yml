@@ -53,7 +53,7 @@ jobs:
             install luarocks-build-treesitter-parser
       - name: LuaRocks Upload
         # v7.2.0
-        uses: nvim-neorocks/luarocks-tag-release@vadbca66e871a519055f4917c6af5fbf19f656f5d
+        uses: lumen-oss/luarocks-tag-release@adbca66e871a519055f4917c6af5fbf19f656f5d
         env:
           LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}
         with:
