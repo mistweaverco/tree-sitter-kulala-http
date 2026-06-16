@@ -35,7 +35,10 @@ jobs:
           node-version-file: .node-version
           cache: pnpm
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm install --frozen-lockfile
+          PNPM_BIN_DIR=$(pnpm bin)
+          echo "$PNPM_BIN_DIR" >> $GITHUB_PATH
       - name: Set up Lua
         # v11
         uses: luarocks/gh-actions-lua@989f8e6ffba55ce1817e236478c98558e598776c
