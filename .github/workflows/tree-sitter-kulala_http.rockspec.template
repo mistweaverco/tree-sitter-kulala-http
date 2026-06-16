@@ -11,8 +11,9 @@ version = modrev ..'-'.. specrev
 description = {
   summary = '$summary',
   labels = $labels,
-  homepage = '$homepage',
+  homepage = repo_url,
   $license
+  maintainer = "mistweaverco <oss@mistweaverco.com>"
 }
 
 build_dependencies = {
